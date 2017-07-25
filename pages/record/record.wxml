@@ -1,0 +1,22 @@
+<!--pages/record/record.wxml-->
+<block wx:if="{{hasRecordData}}">
+  <view class="record" wx:for="{{recordData}}" wx:key="unique">
+    <view class="item">
+      <i>时间：</i><span>{{item.check_in_at}}</span>
+    </view>
+    <view class="item item-spec">
+      <view class="item-left"><i>数量：</i><span>{{item.quantity}}</span></view>
+      <view class="item-right"><i>票码：</i><span>{{item.voucher_number}}</span></view>
+    </view>
+    <view class="item">
+      <i>产品：</i><span>{{item.ticket_name}}</span>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <!-- null  -->
+  <view class="null">
+    <image src="../../static/image/null.png"></image>
+    <text>您尚无验票记录</text>
+  </view>
+</block>

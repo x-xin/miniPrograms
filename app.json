@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login",
+    "pages/record/record",
+    "pages/ticketCode/ticketCode",
+    "pages/success/success"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "笨游商家版",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#f2f4f5"
+  },
+  "tabBar": {
+    "color":"#707070",
+    "selectedColor":"#00b7ff",
+    "backgroundColor":"#fff",
+    "borderStyle":"black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/icon/icon_home_nor.png",
+        "selectedIconPath": "static/icon/icon_home_pre.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "记录",
+        "iconPath": "static/icon/icon_record_nor.png",
+        "selectedIconPath": "static/icon/icon_record_pre.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

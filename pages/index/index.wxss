@@ -1,0 +1,50 @@
+/**index.wxss**/
+.userInfo{
+  padding: 35rpx 28rpx 0rpx 70rpx;
+  line-height: 60rpx;
+  background-color: #00c7ff;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 36rpx;
+  min-height: 156rpx;
+}
+.userInfo .userName{
+  font-size: 28rpx;
+}
+.userInfo .senceName{
+  line-height: 40rpx;
+  position: relative;
+}
+.senceIcon{
+  position: absolute;
+  top: 0;
+  left: -40rpx;
+  font-size: 36rpx;
+  line-height: 36rpx;
+}
+.userBtn{
+  margin: 60rpx auto;
+  height: 156rpx;
+  width: 90%;
+  line-height: 156rpx;
+  text-align: center;
+  color: #333;
+  font-size: 40rpx;
+  border: 1px solid #61cffb;
+  border-radius: 156rpx;
+  background-color: #fafbfb;
+}
+.userBtn text{
+  display: inline-block;
+  vertical-align: top;
+}
+.userBtn .text{
+  letter-spacing: 10rpx;
+}
+.userBtn span{
+  display: inline-block;
+  color: #00b7ff;
+  font-weight: bold;
+  font-size: 60rpx;
+  padding-right: 30rpx;
+}

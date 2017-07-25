@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view id="login" class="login" bindtap="bindViewTap">
+  <image class="logo" src="../../static/image/logo.png"></image>
+</view>
+<form bindsubmit="loginSubmit" class="loginForm">
+  <view class="userName">
+    <span class="iconfont icon-key"></span>
+    <input name="userName" placeholder="请输入登录账号" />
+  </view>
+  <view class="userPwd">
+    <span class="iconfont icon-user"></span>
+    <input name="userPwd" cursor-spacing="30" password="true" placeholder="请输入登录密码" />
+  </view>
+  <!-- bindtap="bindViewTap"  -->
+  <button class="formBtn" formType="submit">登录</button>
+</form>

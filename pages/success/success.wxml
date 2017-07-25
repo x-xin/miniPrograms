@@ -1,0 +1,28 @@
+<!--pages/success/success.wxml-->
+<view class="success">
+  <view class="successNotice">
+    <icon type="success" size="70"/>
+    <span>验证成功</span>
+  </view>
+  <view class="successMsg" wx:for="{{successInfo}}" wx:key="success_unique">
+    <view class="item">
+      <i>产品：</i><span>{{item.ticket_name}}</span>
+    </view>
+    <view class="item">
+      <i>数量：</i><span>{{item.quantity}}</span>
+    </view>
+    <view class="item">
+      <i>票码：</i><span>{{item.voucher_number}}</span>
+    </view>
+  </view>
+  <view class="successBtn">
+    <view class="userBtn twoCode" bindtap="controlTwoCode">
+      <span class="iconfont icon-saoma1"></span>
+      <text>扫描二维码</text>
+    </view>
+    <navigator class="userBtn ticketCode" url="/pages/ticketCode/ticketCode" hover-class="navigator-hover">
+      <span class="iconfont icon-xie1"></span>
+      <text class="text">输入票码</text>
+    </navigator>
+  </view>
+</view>

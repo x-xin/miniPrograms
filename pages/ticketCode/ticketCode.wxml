@@ -1,0 +1,10 @@
+<!--pages/ticketCode/ticketCode.wxml-->
+<form bindsubmit="loginSubmit">
+  <view class="title">
+    <text>请输入票码</text>
+  </view>
+  <view class="inputItem">
+    <input class="inputList" type="number" maxlength="8" placeholder="请输入8位票码" focus="true" name="ticketCode"/>
+  </view>
+  <button class="ticketCommit" formType="submit">确定</button>
+</form>

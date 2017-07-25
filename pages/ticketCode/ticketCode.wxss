@@ -1,0 +1,29 @@
+/* pages/ticketCode/ticketCode.wxss */
+.title{
+  padding-top: 86rpx;
+  font-size: 40rpx;
+  color: #000;
+  text-align: center;
+}
+.inputList{
+  width: 90%;
+  height: 50rpx;
+  margin: 60rpx auto;
+  padding: 20rpx 0;
+  border-radius: 8rpx;
+  border: 1rpx solid #00b7ff;
+  text-align: center;
+  color: #000;
+  font-size: 50rpx;
+  background-color: #fff;
+}
+.ticketCommit{
+  width: 90%;
+  margin: 0 auto;
+  background-color: #00b7ff;
+  color: #fff;
+  font-size: 36rpx;
+  vertical-align: middle;
+  height:92rpx;
+  line-height:92rpx;
+}

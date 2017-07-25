@@ -1,0 +1,45 @@
+/* pages/success/success.wxss */
+.successNotice{
+  padding-top: 100rpx;
+  text-align: center;
+}
+.successNotice span{
+  display: block;
+  text-align: center;
+  color: #000;
+  font-size: 40rpx;
+  line-height: 80rpx;
+}
+.successMsg{
+  padding: 50rpx;
+  color: #666666;
+  font-size: 30rpx;
+}
+.successMsg .item{
+  display: flex;
+  padding-bottom: 10rpx;
+}
+.successMsg .item i{
+  color: #999;
+  flex-shrink: 0;
+}
+.successBtn .userBtn{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 25rpx;
+  text-align: center;
+  background-color: #fafcfc;
+  color: #000;
+  font-size: 36rpx;
+  line-height: 86rpx;
+  border-radius: 10rpx;
+  border:1px solid #d6d5d6;
+}
+.successBtn .userBtn span[class*=iconfont]{
+  margin-right: 20rpx;
+}
+.successBtn .twoCode{
+  background-color: #00b7ff;
+  border:none;
+  color: #fff;
+}

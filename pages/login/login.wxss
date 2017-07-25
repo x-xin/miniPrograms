@@ -1,0 +1,46 @@
+/* pages/login/login.wxss */
+.login{
+  text-align: center;
+}
+.logo{
+  display: block;
+  margin: 0 auto;
+  padding: 120rpx 0 150rpx;
+  width: 510rpx;
+  height: 100rpx;
+}
+.loginForm .userName,.loginForm .userPwd{
+  background-color: #fff;
+  padding: 0 30rpx;
+  position: relative;
+}
+.loginForm .userName span,.loginForm .userPwd span{
+  display: inline-block;
+  margin-top: -17rpx;
+  color: #747474;
+  font-size: 34rpx;
+  position: absolute;
+  top: 50%;
+  left: 75rpx;
+}
+.loginForm .userName{
+  border-top: 1px solid #e9e9e9;
+}
+.loginForm .userPwd{
+  margin-bottom: 60rpx;
+  border-bottom: 1px solid #e9e9e9;
+}
+.loginForm .userName input{
+  border-bottom: 1px solid #e9e9e9;
+}
+.loginForm input{
+  padding: 26rpx 26rpx 26rpx 100rpx;
+  font-size: 34rpx;
+  color: #333;
+}
+.loginForm .formBtn{
+  width: 90%;
+  background-color: #00b7ff;
+  color: #fff;
+  font-size: 36rpx;
+}
