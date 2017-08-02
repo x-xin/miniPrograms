@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-import { api, wxLogin, wxControlTwoCode } from '../../utils/util.js';    
+import { api, wxLogin, wxControlTwoCode } from '../../utils/util.js'; 
 Page({
   data: {
     scenicInfo: {}
@@ -25,10 +25,16 @@ Page({
   },
   onLoad: function () {
     console.log(api);
-    if (wx.getStorageSync('userCookie') === ""){
-      wx.reLaunch({
-        url: '/pages/login/login'
-      })
+    var _this = this;
+    var userCookie = wx.getStorageSync('userCookie') || "";
+    if (userCookie === ""){
+      // wx.redirectTo({
+      //   url: '/pages/login/login'
+      // })
+      console.log("去登录哦哦哦哦哦");
+      wxLogin(function() {
+        _this.onLoad();
+      });
     }else{
       this.setData({
         scenicInfo: {

@@ -1,5 +1,6 @@
-// module baseApi http://192.168.9.150:935
+// module baseApi
 const api = "https://tickettest.jingdian.com";
+// const api = "http://192.168.9.150:935";
 // module baseRecord pageSize
 const pageSize = 20;
 //wxLogin
@@ -26,7 +27,7 @@ let wxLogin = function(fn) {
               success: function (res) {
                 // 去登录
                 if (res.data.res !== 0) {
-                  wx.reLaunch({
+                  wx.redirectTo({
                     url: '/pages/login/login',
                   })
                 } else { // 已登录
@@ -63,9 +64,11 @@ let wxControlTwoCode = function(_res) {
       }
     });
   }else{
-    wx.showLoading({
-      title: '验票中',
-    })
+    if (wx.showLoading){
+      wx.showLoading({
+        title: '验票中',
+      })
+    }
     wx.request({
       url: `${api}/wechatapp/order/checkIn`,
       method: 'POST',
@@ -85,14 +88,18 @@ let wxControlTwoCode = function(_res) {
           });
         } else if (res.data.res === 0) {
           // 验证成功了
-          wx.hideLoading();
+          if (wx.hideLoading){
+            wx.hideLoading();
+          }
           console.log(res.data.data);
           wx.setStorageSync('successInfo', res.data.data);
-          wx.reLaunch({
+          wx.redirectTo({
             url: '/pages/success/success',
           })
         } else {
-          wx.hideLoading();
+          if (wx.hideLoading) {
+            wx.hideLoading();
+          }
           wx.showModal({
             title: '提示',
             content: res.data.msg,

@@ -11,11 +11,15 @@
   margin: 60rpx auto;
   padding: 20rpx 0;
   border-radius: 8rpx;
+  line-height: 50rpx;
   border: 1rpx solid #00b7ff;
   text-align: center;
   color: #000;
   font-size: 50rpx;
   background-color: #fff;
+}
+.input-placeholder{
+   font-size: 40rpx; 
 }
 .ticketCommit{
   width: 90%;

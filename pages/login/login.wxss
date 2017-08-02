@@ -17,6 +17,9 @@
 .loginForm .userName span,.loginForm .userPwd span{
   display: inline-block;
   margin-top: -17rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  vertical-align: middle;
   color: #747474;
   font-size: 34rpx;
   position: absolute;

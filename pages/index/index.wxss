@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-size: 36rpx;
   min-height: 156rpx;
+  background-image: -moz-linear-gradient( 0deg, rgb(0,183,255) 0%, rgb(0,203,255) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(0,183,255) 0%, rgb(0,203,255) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(0,183,255) 0%, rgb(0,203,255) 100%);
 }
 .userInfo .userName{
   font-size: 28rpx;
@@ -30,9 +33,9 @@
   text-align: center;
   color: #333;
   font-size: 40rpx;
-  border: 1px solid #61cffb;
+  border: 1px solid #00b7ff;
   border-radius: 156rpx;
-  background-color: #fafbfb;
+  background-color: #fff;
 }
 .userBtn text{
   display: inline-block;
@@ -44,7 +47,6 @@
 .userBtn span{
   display: inline-block;
   color: #00b7ff;
-  font-weight: bold;
-  font-size: 60rpx;
+  font-size: 90rpx;
   padding-right: 30rpx;
 }

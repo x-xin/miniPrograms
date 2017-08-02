@@ -13,7 +13,7 @@ Page({
         title: '提示',
         content: '请输入八位数字票码',
         showCancel: false,
-        confirmColor: '#000',
+        confirmColor: '#00b7ff',
         success: function (res) {
           if (res.confirm) {
             console.log(res);
@@ -21,9 +21,11 @@ Page({
         }
       });
     } else {
-      wx.showLoading({
-        title: '验票中',
-      })
+      if (wx.showLoading) {
+        wx.showLoading({
+          title: '验票中',
+        })
+      }
       wx.request({
         url: `${api}/wechatapp/order/checkIn`,
         method: 'POST',
@@ -41,20 +43,24 @@ Page({
             });
 
           } else if (res.data.res === 0) {
-            wx.hideLoading();
+            if (wx.hideLoading) {
+              wx.hideLoading();
+            }            
             // 验证成功了
             console.log(res.data.data);
             wx.setStorageSync('successInfo', res.data.data);
-            wx.reLaunch({
+            wx.redirectTo({
               url: '/pages/success/success',
             })
           } else {
-            wx.hideLoading();
+            if (wx.hideLoading) {
+              wx.hideLoading();
+            }
             wx.showModal({
               title: '提示',
               content: res.data.msg,
               showCancel: false,
-              confirmColor: '#000',
+              confirmColor: '#00b7ff',
               success: function (res) {
                 if (res.confirm) {
                   console.log(res);

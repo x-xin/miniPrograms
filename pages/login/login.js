@@ -11,7 +11,7 @@ Page({
         title: '提示',
         content: '账号或者密码不能为空',
         showCancel: false,
-        confirmColor: '#000',
+        confirmColor: '#00b7ff',
         success: function (res) {
           if (res.confirm) {
             console.log(res);
@@ -29,9 +29,11 @@ Page({
             wx.getUserInfo({
               withCredentials: true,
               success: function (res) {
-                wx.showLoading({
-                  title: '加载中',
-                })
+                if (wx.showLoading){
+                  wx.showLoading({
+                    title: '加载中',
+                  })
+                }
                 wx.request({
                   url: `${api}/wechatapp/auth/bind`,
                   method: 'POST',
@@ -46,14 +48,16 @@ Page({
                     'content-type': 'application/x-www-form-urlencoded'
                   },
                   success: function (res) {
-                    wx.hideLoading();
+                    if (wx.hideLoading){
+                      wx.hideLoading();
+                    }
                     console.log(res.data);
                     if (res.data.res !== 0){
                       wx.showModal({
                         title: '提示',
                         content: res.data.msg,
                         showCancel: false,
-                        confirmColor: '#000',
+                        confirmColor: '#00b7ff',
                         success: function (res) {
                           if (res.confirm) {
                             console.log(res);
@@ -66,9 +70,16 @@ Page({
                       wx.setStorageSync('userCookie', res.data.data.cookie);
                       wx.setStorageSync('realName', res.data.data.realname);
                       wx.setStorageSync('scenicName', res.data.data.scenic_name);
-                      wx.reLaunch({
-                        url: '/pages/index/index',
-                      })
+                      if (wx.reLaunch){
+                        wx.reLaunch({
+                          url: '/pages/index/index',
+                        })
+                      }else{
+                        wx.switchTab({
+                          url: '/pages/index/index',
+                        })
+                      }
+                      
                     }
                   }
                 })

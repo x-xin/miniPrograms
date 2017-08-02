@@ -9,9 +9,9 @@
   </view>
 </view>
 <view class="userBtn twoCode" bindtap="controlTwoCode">
-  <span class="iconfont icon-saoma1"></span><text>扫描二维码</text>
+  <span class="iconfont icon-saoma1"></span><text class="text">扫码核销</text>
 </view>
 <!-- /pages/success/success  -->
 <navigator class="userBtn ticketCode" url="/pages/ticketCode/ticketCode" hover-class="navigator-hover">
-  <span class="iconfont icon-xie1"></span><text class="text">输入票码</text>
+  <span class="iconfont icon-xie1"></span><text class="text">票码核销</text>
 </navigator>
